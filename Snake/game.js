@@ -11,6 +11,9 @@ function main(currentTime) {
         if (confirm('You lost. Press OK to restart')) {
             window.location = '/' //This refreshes the page, hence restarts the game
         }
+        else {
+            return;
+        }
     }
 
     window.requestAnimationFrame(main);

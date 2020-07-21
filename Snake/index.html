@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snake</title>
+    <script src="game.js" defer type="module"></script>
+    <style>
+        body {
+            height: 100vh;
+            width: 100vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0;
+            background-color: black;
+        }
+
+        #game-board {
+            background-color: #CCC;
+            width: 100vmin; /* 100% of the width or height, whichever is smaller */
+            height: 100vmin; /* This way the board is always square, with the biggest possible size */
+            display: grid;
+            grid-template-rows: repeat(21, 1fr); /* Game board will be divided to 21 * 21 squares which are exactly the same size */
+            grid-template-columns: repeat(21, 1fr); 
+        }
+
+        .snake {
+            background-color: hsl(200, 100%, 50%);
+            border: .35vmin solid black; /* With bigger screen, the border will be thicker, with smaller screen thinner */
+        }
+
+        .food {
+            background-color: hsl(50, 100%, 50%);
+            border: .35vmin solid black; /* With bigger screen, the border will be thicker, with smaller screen thinner */
+
+        }
+    </style>
+</head>
+<body>
+    <div id="game-board"></div>
+
+</body>
+</html>
